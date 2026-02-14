@@ -10,9 +10,9 @@ Un combat est une rencontre déterminée par la confrontation d’ennemis et fon
 ### 1-1 – L’Initiative
 La première phase de combat est toujours celle-ci : le test d’Initiative de la part des personnages. Celui qui a la plus haute valeur commence, puis le deuxième et ainsi de suite. Une fois que le personnage à la plus basse Initiative a joué, on passe au tour suivant et le premier recommence.
 
-Le score de l’Initiative d’un personnage est déterminé par sa valeur en Constitution qui représente le nombre de dés à lancer. Le résultat est l’Initiative obtenue par le personnage pour cette rencontre. L’Initiative peut avoir des malus en fonction de l’Équipement du personnage. C’est le seul cas où le bonus a une caractéristique qui ne s’applique pas comme une réussite automatique, mais comme un nombre de D10 supplémentaires à lancer.
+Le score de l’Initiative d’un personnage est déterminé par la valeur la plus haute entre celle de la Constitution ou de l’Exploration : elle représente le nombre de dés à lancer. Le résultat est l’Initiative obtenue par le personnage pour cette rencontre. L’Initiative peut avoir des malus en fonction de l’Équipement du personnage. C’est le seul cas où le bonus a une caractéristique qui ne s’applique pas comme une réussite automatique, mais comme un nombre de D10 supplémentaires à lancer.
 
-> **Exemple :** Muvia a 4 (+1) en Constitution. Elle lance 5D10 et obtient 35. Elle a donc une Initiative de 35 et heureusement pour elle, elle est la première à agir dans sa rencontre contre une meute de Tuk’atas puisqu’ils ont une Initiative de 33.
+> **Exemple :** Muvia a 4 (+1) en Exploration. Elle lance 5D10 et obtient 35. Elle a donc une Initiative de 35 et heureusement pour elle, elle est la première à agir dans sa rencontre contre une meute de Tuk’atas puisqu’ils ont une Initiative de 33.
 
 ### 1-2 – L’Embuscade
 Lorsque des personnages préparent une embuscade ou que les personnages sont pris par surprise, le début de la rencontre change quelque peu. Ceux qui prennent en embuscade ont un bonus de +10 à leur Initiative. De plus, ils ont une action de mouvement ou une action principale à effectuer, de manière gratuite, suivant l’ordre qu’ils souhaitent avant de commencer le tour en suivant cette fois l’Initiative.
