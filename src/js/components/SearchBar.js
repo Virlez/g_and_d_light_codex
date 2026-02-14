@@ -28,11 +28,14 @@ export class SearchBar {
                     aria-label="Rechercher dans le codex"
                 >
                 <kbd class="search-shortcut" aria-hidden="true">Ctrl+K</kbd>
+                <button class="search-close-btn" id="searchCloseBtn" aria-label="Fermer la recherche">&times;</button>
                 <div class="search-results" id="searchResults" role="listbox" aria-label="Résultats de recherche"></div>
             </div>
         `;
         this.input = document.getElementById('searchInput');
         this.resultsPanel = document.getElementById('searchResults');
+        this.wrapper = this.container.querySelector('.search-wrapper');
+        this.closeBtn = document.getElementById('searchCloseBtn');
     }
 
     bindEvents() {
@@ -58,6 +61,7 @@ export class SearchBar {
                     const query = this.input.value.trim();
                     this.close();
                     this.input.value = '';
+                    this.input.blur();
                     this.router.pendingSearchQuery = query;
                     this.router.navigate(path.replace(/^#/, ''));
                 }
@@ -71,10 +75,13 @@ export class SearchBar {
         this.resultsPanel.addEventListener('click', (e) => {
             const item = e.target.closest('.search-result-item');
             if (item) {
+                e.preventDefault();
+                e.stopPropagation(); // Prevent router's document click from triggering a second navigate
                 const path = item.dataset.path;
                 const query = this.input.value.trim();
                 this.close();
                 this.input.value = '';
+                this.input.blur();
                 // Store the query so the app can scroll to the match after render
                 this.router.pendingSearchQuery = query;
                 this.router.navigate(path.replace(/^#/, ''));
@@ -97,12 +104,25 @@ export class SearchBar {
             }
         });
 
-        // Focus opens results if there's a query
+        // Focus opens results if there's a query; also open mobile overlay
         this.input.addEventListener('focus', () => {
+            if (this._isMobile()) {
+                this.wrapper.classList.add('search-open');
+            }
             if (this.input.value.trim().length >= 2) {
                 this.onSearch();
             }
         });
+
+        // Close button (mobile overlay)
+        this.closeBtn.addEventListener('click', () => {
+            this.close();
+            this.input.blur();
+        });
+    }
+
+    _isMobile() {
+        return window.innerWidth <= 768;
     }
 
     onSearch() {
@@ -145,6 +165,7 @@ export class SearchBar {
 
     close() {
         this.resultsPanel.classList.remove('open');
+        this.wrapper.classList.remove('search-open');
         this.isOpen = false;
     }
 
