@@ -27,7 +27,7 @@ Dans le cas de races Hybrides, on choisit le bonus d’un des parents.
 | **Mirialan** | (+1) Force | |
 | **Mon Calamari** | (+1) Social | |
 | **Nautolan** | (+1) Social | |
-| **Nikto** | **(+2)** Exploration | *Notez le bonus exceptionnel de +2.* |
+| **Nikto** | **(+1)** Exploration | |
 | **Rattataki** | (+1) Physique | |
 | **Rodien** | (+1) Distance | |
 | **Sarkhai** | (+1) Savoir | |
