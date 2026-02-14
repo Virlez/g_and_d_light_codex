@@ -19,8 +19,8 @@ class App {
     }
 
     initThemeToggle() {
-        // Load saved theme or default to dark
-        const savedTheme = localStorage.getItem('theme') || 'dark';
+        // Load saved theme or default to jedi
+        const savedTheme = localStorage.getItem('theme') || 'jedi';
         document.documentElement.setAttribute('data-theme', savedTheme);
 
         // Setup theme toggle button
@@ -28,7 +28,7 @@ class App {
         if (themeToggle) {
             themeToggle.addEventListener('click', () => {
                 const currentTheme = document.documentElement.getAttribute('data-theme');
-                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                const newTheme = currentTheme === 'jedi' ? 'sith' : 'jedi';
                 
                 document.documentElement.setAttribute('data-theme', newTheme);
                 localStorage.setItem('theme', newTheme);

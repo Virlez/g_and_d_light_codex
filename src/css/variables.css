@@ -10,9 +10,9 @@
     --color-orange-sith: #ff6b35;
     --color-orange-glow: #ff8c5a;
     
-    --color-text-primary: #e8edf5;
-    --color-text-secondary: #b8c5d6;
-    --color-text-muted: #7a8ca0;
+    --color-text-primary: #f2f5fa;
+    --color-text-secondary: #d0dae8;
+    --color-text-muted: #9aabc0;
     
     --color-success: #4ade80;
     --color-warning: #fbbf24;
@@ -83,38 +83,31 @@
     --z-tooltip: 1070;
 }
 
-/* Light theme */
-[data-theme="light"] {
-    /* Colors - Light Theme */
-    --color-space-dark: #f5f7fa;
-    --color-space-darker: #ffffff;
-    --color-space-light: #e8ecf1;
-    --color-space-lighter: #d1d9e3;
+/* Sith theme */
+[data-theme="sith"] {
+    /* Colors - Sith Theme (dark red) */
+    --color-space-dark: #1e0c0c;
+    --color-space-darker: #110707;
+    --color-space-light: #381818;
+    --color-space-lighter: #4d2525;
     
-    --color-blue-jedi: #2563eb;
-    --color-blue-glow: #3b82f6;
-    --color-orange-sith: #ea580c;
-    --color-orange-glow: #f97316;
+    --color-blue-jedi: #ff2a2a;
+    --color-blue-glow: #ff4d4d;
+    --color-orange-sith: #ff6b35;
+    --color-orange-glow: #ff8c5a;
     
-    --color-text-primary: #1e293b;
-    --color-text-secondary: #475569;
-    --color-text-muted: #64748b;
+    --color-text-primary: #f5e6e6;
+    --color-text-secondary: #ddc4c4;
+    --color-text-muted: #a88a8a;
     
-    --color-success: #16a34a;
-    --color-warning: #d97706;
-    --color-error: #dc2626;
+    --color-success: #4ade80;
+    --color-warning: #fbbf24;
+    --color-error: #ff4444;
     
-    /* Shadows for light theme */
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12);
-    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
-    --shadow-glow-blue: 0 0 20px rgba(37, 99, 235, 0.15);
-    --shadow-glow-orange: 0 0 20px rgba(234, 88, 12, 0.15);
-}
-
-/* Dark theme adjustments */
-@media (prefers-color-scheme: light) {
-    :root {
-        /* Keep dark theme even if user prefers light */
-    }
+    /* Shadows for sith theme - no glow for readability */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.6);
+    --shadow-glow-blue: none;
+    --shadow-glow-orange: none;
 }
