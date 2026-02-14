@@ -63,6 +63,13 @@
         "icon": "🎲",
         "description": "Guide pour les maîtres de jeu et gestion des parties",
         "contentPath": "mj/index",
-        "order": 3
+        "order": 3,
+        "subPages": [
+            { "id": "difficulte-tests", "name": "La Difficulté des tests", "icon": "📊", "contentPath": "mj/difficulte-tests" },
+            { "id": "creation-pnj", "name": "La Création des Personnages Non-Joueurs", "icon": "👥", "contentPath": "mj/creation-pnj" },
+            { "id": "armements-annexes", "name": "Les Armements annexes", "icon": "⚔️", "contentPath": "mj/armements-annexes" },
+            { "id": "regles-optionnelles", "name": "Les Règles optionnelles", "icon": "⚙️", "contentPath": "mj/regles-optionnelles" },
+            { "id": "guide-rencontres", "name": "Le Guide des rencontres", "icon": "🗺️", "contentPath": "mj/guide-rencontres" }
+        ]
     }
 ]
