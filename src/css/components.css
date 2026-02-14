@@ -595,12 +595,12 @@
     background: linear-gradient(135deg, #4a9eff, #6bb6ff);
     border-radius: 50%;
     transition: all var(--transition-base);
-    transform: translateX(2px);
+    left: 4px;
     box-shadow: 0 0 8px rgba(74, 158, 255, 0.4);
 }
 
 [data-theme="sith"] .theme-toggle::before {
-    transform: translateX(32px);
+    left: 34px;
     background: linear-gradient(135deg, #ff2a2a, #cc0000);
     box-shadow: 0 0 8px rgba(255, 42, 42, 0.5);
 }
