@@ -54,7 +54,12 @@ export class SearchBar {
                 const focused = this.resultsPanel.querySelector('.search-result-item.focused');
                 if (focused) {
                     e.preventDefault();
-                    focused.click();
+                    const path = focused.dataset.path;
+                    const query = this.input.value.trim();
+                    this.close();
+                    this.input.value = '';
+                    this.router.pendingSearchQuery = query;
+                    this.router.navigate(path.replace(/^#/, ''));
                 }
             } else if (e.key === 'Escape') {
                 this.close();
@@ -67,8 +72,11 @@ export class SearchBar {
             const item = e.target.closest('.search-result-item');
             if (item) {
                 const path = item.dataset.path;
+                const query = this.input.value.trim();
                 this.close();
                 this.input.value = '';
+                // Store the query so the app can scroll to the match after render
+                this.router.pendingSearchQuery = query;
                 this.router.navigate(path.replace(/^#/, ''));
             }
         });

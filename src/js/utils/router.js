@@ -4,6 +4,7 @@ export class Router {
         this.routes = [];
         this.currentRoute = null;
         this.onRouteChange = null;
+        this.pendingSearchQuery = null;
     }
 
     register(path, handler) {
@@ -26,15 +27,15 @@ export class Router {
         return null;
     }
 
-    navigate(path) {
+    async navigate(path) {
         const match = this.matchRoute(path);
         if (match) {
             this.currentRoute = path;
             window.history.pushState({}, '', `#${path}`);
             if (match.params) {
-                match.handler(match.params);
+                await match.handler(match.params);
             } else {
-                match.handler();
+                await match.handler();
             }
             if (this.onRouteChange) {
                 this.onRouteChange(path);
@@ -42,15 +43,15 @@ export class Router {
         }
     }
 
-    handleRoute() {
+    async handleRoute() {
         const hash = window.location.hash.slice(1) || '/';
         const match = this.matchRoute(hash);
         if (match) {
             this.currentRoute = hash;
             if (match.params) {
-                match.handler(match.params);
+                await match.handler(match.params);
             } else {
-                match.handler();
+                await match.handler();
             }
             if (this.onRouteChange) {
                 this.onRouteChange(hash);
