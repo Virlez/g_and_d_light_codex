@@ -40,7 +40,7 @@
     font-family: var(--font-display);
     font-size: var(--font-size-3xl);
     color: var(--color-blue-jedi);
-    text-shadow: 0 0 10px rgba(74, 158, 255, 0.5);
+    text-shadow: var(--shadow-glow-blue);
     letter-spacing: 2px;
 }
 

@@ -34,7 +34,7 @@
 .card-title {
     font-family: var(--font-display);
     font-size: var(--font-size-2xl);
-    color: var(--color-blue-jedi);
+    color: #ffffff;
     margin-bottom: var(--spacing-md);
     letter-spacing: 1px;
 }
@@ -110,7 +110,7 @@
 .content-section h3,
 .content-section h4 {
     font-family: var(--font-display);
-    color: var(--color-blue-jedi);
+    color: #ffffff;
     margin-top: var(--spacing-xl);
     margin-bottom: var(--spacing-md);
     letter-spacing: 1px;
@@ -243,7 +243,7 @@
 .home-title {
     font-family: var(--font-display);
     font-size: var(--font-size-5xl);
-    color: var(--color-blue-jedi);
+    color: #ffffff;
     text-shadow: var(--shadow-glow-blue);
     margin-bottom: var(--spacing-md);
     letter-spacing: 2px;
@@ -329,7 +329,7 @@
 .sub-navigation h3 {
     font-family: var(--font-display);
     font-size: var(--font-size-lg);
-    color: var(--color-blue-jedi);
+    color: #ffffff;
     margin-bottom: var(--spacing-md);
     padding-bottom: var(--spacing-sm);
     border-bottom: 1px solid var(--color-space-lighter);
@@ -535,8 +535,8 @@
 /* Theme Toggle Button */
 .theme-toggle {
     position: relative;
-    width: 60px;
-    height: 32px;
+    width: 68px;
+    height: 36px;
     background: linear-gradient(135deg, var(--color-space-light) 0%, var(--color-space-dark) 100%);
     border: 2px solid var(--color-blue-jedi);
     border-radius: 20px;
@@ -545,7 +545,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 4px;
+    padding: 0 6px;
     overflow: hidden;
 }
 
@@ -555,43 +555,54 @@
 }
 
 .theme-icon {
-    font-size: 16px;
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
     transition: all var(--transition-base);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 1;
+    filter: brightness(0) invert(1);
 }
 
-.sun-icon {
+/* Jedi theme (default) - Jedi icon bright, Sith icon dim */
+.jedi-icon {
+    opacity: 1;
+    filter: brightness(0) invert(1) drop-shadow(0 0 4px rgba(74, 158, 255, 0.6));
+}
+
+.sith-icon {
     opacity: 0.3;
 }
 
-.moon-icon {
-    opacity: 1;
-}
-
-[data-theme="light"] .sun-icon {
-    opacity: 1;
-}
-
-[data-theme="light"] .moon-icon {
+/* Sith theme - Sith icon bright red, Jedi icon dim */
+[data-theme="sith"] .jedi-icon {
     opacity: 0.3;
+    filter: brightness(0) invert(1);
+}
+
+[data-theme="sith"] .sith-icon {
+    opacity: 1;
+    filter: brightness(0) invert(0.5) sepia(1) saturate(10) hue-rotate(0deg) drop-shadow(0 0 4px rgba(255, 42, 42, 0.6));
 }
 
 .theme-toggle::before {
     content: '';
     position: absolute;
-    width: 24px;
-    height: 24px;
-    background: linear-gradient(135deg, var(--color-blue-jedi), var(--color-orange-sith));
+    width: 26px;
+    height: 26px;
+    background: linear-gradient(135deg, #4a9eff, #6bb6ff);
     border-radius: 50%;
-    transition: transform var(--transition-base);
+    transition: all var(--transition-base);
     transform: translateX(2px);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 8px rgba(74, 158, 255, 0.4);
 }
 
-[data-theme="light"] .theme-toggle::before {
-    transform: translateX(30px);
+[data-theme="sith"] .theme-toggle::before {
+    transform: translateX(32px);
+    background: linear-gradient(135deg, #ff2a2a, #cc0000);
+    box-shadow: 0 0 8px rgba(255, 42, 42, 0.5);
 }
+
 
