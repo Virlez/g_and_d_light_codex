@@ -83,6 +83,35 @@
     --z-tooltip: 1070;
 }
 
+/* Light theme */
+[data-theme="light"] {
+    /* Colors - Light Theme */
+    --color-space-dark: #f5f7fa;
+    --color-space-darker: #ffffff;
+    --color-space-light: #e8ecf1;
+    --color-space-lighter: #d1d9e3;
+    
+    --color-blue-jedi: #2563eb;
+    --color-blue-glow: #3b82f6;
+    --color-orange-sith: #ea580c;
+    --color-orange-glow: #f97316;
+    
+    --color-text-primary: #1e293b;
+    --color-text-secondary: #475569;
+    --color-text-muted: #64748b;
+    
+    --color-success: #16a34a;
+    --color-warning: #d97706;
+    --color-error: #dc2626;
+    
+    /* Shadows for light theme */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
+    --shadow-glow-blue: 0 0 20px rgba(37, 99, 235, 0.15);
+    --shadow-glow-orange: 0 0 20px rgba(234, 88, 12, 0.15);
+}
+
 /* Dark theme adjustments */
 @media (prefers-color-scheme: light) {
     :root {
