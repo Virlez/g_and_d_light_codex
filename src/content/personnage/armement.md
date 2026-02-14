@@ -45,11 +45,11 @@ Contrairement aux autres, ces armes ont une **valeur de dégâts fixe** (pas de 
 
 | Arme | Dégâts Fixes | Efficacité Spéciale |
 | :--- | :---: | :--- |
-| **Grenade** | 8 | x2 dégâts sur infanterie et hordes. |
-| **Détonateur thermique** | 12 | x2 dégâts sur infanterie et hordes. |
-| **Mine** | 14 | x2 dégâts sur infanterie et hordes. |
+| **Grenade** | 8 | x2 dégâts sur infanterie ou hordes. x4 si horde **Et** infanterie.|
+| **Détonateur thermique** | 12 | x2 dégâts sur infanterie ou hordes. x4 si horde **Et** infanterie. |
+| **Mine** | 14 | x2 dégâts sur infanterie ou hordes. x4 si horde **Et** infanterie.|
 | **Charge explosive** | 20 | x2 dégâts sur hordes. Dégâts normaux sur véhicules/bâtiments. |
-| **Lance-roquette** | 25 | x2 dégâts sur infanterie et hordes. Dégâts normaux sur véhicules/bâtiments. |
+| **Lance-roquette** | 25 | x2 dégâts sur infanterie ou hordes. x4 si horde **Et** infanterie.. Dégâts normaux sur véhicules/bâtiments. |
 
 ---
 
