@@ -28,13 +28,13 @@ export class Navigation {
         const categories = this.dataStore.getAllCategories();
         
         const homeLink = `
-            <a href="/" class="nav-link" data-link>
+            <a href="#/" class="nav-link" data-link>
                 Accueil
             </a>
         `;
 
         const categoryLinks = categories.map(category => `
-            <a href="/category/${category.id}" class="nav-link" data-link>
+            <a href="#/category/${category.id}" class="nav-link" data-link>
                 ${category.icon} ${category.name}
             </a>
         `).join('');
@@ -45,11 +45,11 @@ export class Navigation {
 
     updateActiveLink() {
         const links = this.navElement.querySelectorAll('.nav-link');
+        const currentHash = window.location.hash.slice(1) || '/';
         links.forEach(link => {
             link.classList.remove('active');
-            const href = link.getAttribute('href');
-            if (href === window.location.hash.slice(1) || 
-                (href === '/' && !window.location.hash)) {
+            const href = link.getAttribute('href').replace(/^#/, '');
+            if (href === currentHash) {
                 link.classList.add('active');
             }
         });

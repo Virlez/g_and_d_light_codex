@@ -73,7 +73,7 @@ export class Router {
             const link = e.target.closest('[data-link]');
             if (link) {
                 e.preventDefault();
-                const path = link.getAttribute('href');
+                const path = link.getAttribute('href').replace(/^#/, '');
                 this.navigate(path);
             }
         });

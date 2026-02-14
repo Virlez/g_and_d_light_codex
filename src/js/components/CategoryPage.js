@@ -12,7 +12,7 @@ export class CategoryPage {
                 <div class="content-section">
                     <h1>Catégorie non trouvée</h1>
                     <p>La catégorie demandée n'existe pas.</p>
-                    <a href="/" class="btn btn-primary" data-link>Retour à l'accueil</a>
+                    <a href="#/" class="btn btn-primary" data-link>Retour à l'accueil</a>
                 </div>
             `;
         }
@@ -77,7 +77,7 @@ export class CategoryPage {
                 <div class="content-section">
                     <h1>Erreur de chargement</h1>
                     <p>Impossible de charger le contenu de cette section.</p>
-                    <a href="/" class="btn btn-primary" data-link>Retour à l'accueil</a>
+                    <a href="#/" class="btn btn-primary" data-link>Retour à l'accueil</a>
                 </div>
             `;
         }
@@ -87,10 +87,10 @@ export class CategoryPage {
         let breadcrumb = `
             <div class="breadcrumb">
                 <span class="breadcrumb-item">
-                    <a href="/" class="breadcrumb-link" data-link>Accueil</a>
+                    <a href="#/" class="breadcrumb-link" data-link>Accueil</a>
                 </span>
                 <span class="breadcrumb-item">
-                    <a href="/category/${category.id}" class="breadcrumb-link" data-link>${category.name}</a>
+                    <a href="#/category/${category.id}" class="breadcrumb-link" data-link>${category.name}</a>
                 </span>
         `;
 
@@ -117,7 +117,7 @@ export class CategoryPage {
             
             let html = `
                 <div class="sub-nav-item ${isActive}">
-                    <a href="/category/${category.id}/${subPage.id}" class="sub-nav-link" data-link>
+                    <a href="#/category/${category.id}/${subPage.id}" class="sub-nav-link" data-link>
                         <span class="sub-nav-icon">${subPage.icon || '📄'}</span>
                         <span class="sub-nav-name">${subPage.name}</span>
                     </a>
@@ -128,7 +128,7 @@ export class CategoryPage {
                 subPage.subPages.forEach(child => {
                     const childActive = currentSubPageId === child.id ? 'active' : '';
                     html += `
-                        <a href="/category/${category.id}/${child.id}" class="sub-nav-child-link ${childActive}" data-link>
+                        <a href="#/category/${category.id}/${child.id}" class="sub-nav-child-link ${childActive}" data-link>
                             ${child.name}
                         </a>
                     `;
@@ -168,8 +168,8 @@ export class CategoryPage {
 
         if (prevPage) {
             const prevUrl = prevPage.id === category.id 
-                ? `/category/${category.id}` 
-                : `/category/${category.id}/${prevPage.id}`;
+                ? `#/category/${category.id}` 
+                : `#/category/${category.id}/${prevPage.id}`;
             html += `
                 <a href="${prevUrl}" class="nav-button nav-prev" data-link>
                     <span class="nav-arrow">←</span>
@@ -185,8 +185,8 @@ export class CategoryPage {
 
         if (nextPage) {
             const nextUrl = nextPage.id === category.id 
-                ? `/category/${category.id}` 
-                : `/category/${category.id}/${nextPage.id}`;
+                ? `#/category/${category.id}` 
+                : `#/category/${category.id}/${nextPage.id}`;
             html += `
                 <a href="${nextUrl}" class="nav-button nav-next" data-link>
                     <div class="nav-content">

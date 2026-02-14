@@ -35,7 +35,7 @@ export class HomePage {
             ${characterSheetBtn}
             <div class="grid grid-3">
                 ${categories.map(category => `
-                    <a href="/category/${category.id}" data-link class="card category-card">
+                    <a href="#/category/${category.id}" data-link class="card category-card">
                         <div class="card-icon">${category.icon}</div>
                         <h2 class="card-title">${category.name}</h2>
                         <p class="card-description">${category.description}</p>
