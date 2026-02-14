@@ -76,7 +76,22 @@ g_and_d_light_codex/
 │   │   │   ├── protections.md
 │   │   │   ├── armement.md
 │   │   │   └── objets-soutien.md
-│   │   └── mj/                # Guide du Maître de Jeu
+│   │   ├── systeme/           # Système de jeu
+│   │   │   ├── index.md
+│   │   │   ├── valeurs-des-des.md
+│   │   │   ├── entraide.md
+│   │   │   ├── exploits-echecs.md
+│   │   │   ├── caracteristiques.md
+│   │   │   ├── combat.md
+│   │   │   ├── styles-combat.md
+│   │   │   └── degats-blessures-soins.md
+│   │   └── mj/                # Guide du Maître de Jeu (5 pages)
+│   │       ├── index.md
+│   │       ├── difficulte-tests.md
+│   │       ├── creation-pnj.md
+│   │       ├── armements-annexes.md
+│   │       ├── regles-optionnelles.md
+│   │       └── guide-rencontres.md
 │   └── assets/            # Images, icons, etc.
 └── README.md
 ```
