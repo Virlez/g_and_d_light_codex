@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G&D Light Codex - Datapad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="datapad-container">
+        <div class="datapad-header">
+            <div class="power-indicator"></div>
+            <h1 class="datapad-title">G&D LIGHT CODEX</h1>
+            <div class="signal-indicator">
+                <span class="signal-bar"></span>
+                <span class="signal-bar"></span>
+                <span class="signal-bar"></span>
+            </div>
+        </div>
+
+        <nav class="datapad-nav">
+            <button class="nav-button active" data-section="home">
+                <span class="nav-icon">⬢</span>
+                <span class="nav-text">ACCUEIL</span>
+            </button>
+            <button class="nav-button" data-section="creation">
+                <span class="nav-icon">👤</span>
+                <span class="nav-text">CRÉATION DE PERSONNAGE</span>
+            </button>
+            <button class="nav-button" data-section="mj">
+                <span class="nav-icon">⚔</span>
+                <span class="nav-text">GLOIRE AU MJ</span>
+            </button>
+        </nav>
+
+        <main class="datapad-content">
+            <section id="home" class="content-section active">
+                <div class="panel">
+                    <div class="panel-header">
+                        <span class="panel-title">BIENVENUE DANS LE CODEX</span>
+                        <span class="panel-status">■ EN LIGNE</span>
+                    </div>
+                    <div class="panel-body">
+                        <p class="datapad-text">
+                            Système G&D Light - Version 1.0<br>
+                            <span class="text-dim">Initialisé: STARDUST.2026</span>
+                        </p>
+                        <p class="datapad-text">
+                            Bienvenue dans le Codex G&D Light. Sélectionnez une section ci-dessus pour accéder aux différents modules du système.
+                        </p>
+                        <div class="info-grid">
+                            <div class="info-box">
+                                <div class="info-label">MODULES DISPONIBLES</div>
+                                <div class="info-value">2</div>
+                            </div>
+                            <div class="info-box">
+                                <div class="info-label">STATUT SYSTÈME</div>
+                                <div class="info-value">OPÉRATIONNEL</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="creation" class="content-section">
+                <div class="panel">
+                    <div class="panel-header">
+                        <span class="panel-title">CRÉATION DE PERSONNAGE</span>
+                        <span class="panel-status">■ MODULE ACTIF</span>
+                    </div>
+                    <div class="panel-body">
+                        <h2 class="section-title">Guide de création</h2>
+                        <p class="datapad-text">
+                            Suivez les étapes ci-dessous pour créer votre personnage dans le système G&D Light.
+                        </p>
+                        
+                        <div class="step-container">
+                            <div class="step">
+                                <div class="step-number">01</div>
+                                <div class="step-content">
+                                    <h3>Concept de personnage</h3>
+                                    <p>Déterminez le concept général de votre personnage : qui est-il, quelle est son histoire, quelles sont ses motivations ?</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-number">02</div>
+                                <div class="step-content">
+                                    <h3>Caractéristiques</h3>
+                                    <p>Répartissez les points entre vos caractéristiques principales. Définissez les forces et faiblesses de votre personnage.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-number">03</div>
+                                <div class="step-content">
+                                    <h3>Compétences</h3>
+                                    <p>Choisissez les compétences qui correspondent à votre concept. Chaque compétence reflète l'expertise de votre personnage.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="step">
+                                <div class="step-number">04</div>
+                                <div class="step-content">
+                                    <h3>Équipement</h3>
+                                    <p>Sélectionnez l'équipement de départ adapté à votre personnage et à votre style de jeu.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="alert-box">
+                            <span class="alert-icon">⚠</span>
+                            <span>Consultez votre MJ pour valider votre personnage avant la première session.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="mj" class="content-section">
+                <div class="panel">
+                    <div class="panel-header">
+                        <span class="panel-title">GLOIRE AU MJ</span>
+                        <span class="panel-status">■ MODULE ACTIF</span>
+                    </div>
+                    <div class="panel-body">
+                        <h2 class="section-title">Guide du Maître de Jeu</h2>
+                        <p class="datapad-text">
+                            Ressources et conseils pour les Maîtres de Jeu utilisant le système G&D Light.
+                        </p>
+                        
+                        <div class="mj-grid">
+                            <div class="mj-card">
+                                <div class="mj-card-icon">📖</div>
+                                <h3>Règles de base</h3>
+                                <p>Principes fondamentaux du système G&D Light pour mener vos parties avec fluidité.</p>
+                            </div>
+                            
+                            <div class="mj-card">
+                                <div class="mj-card-icon">🎲</div>
+                                <h3>Gestion des conflits</h3>
+                                <p>Méthodes pour arbitrer les situations conflictuelles et maintenir l'équilibre du jeu.</p>
+                            </div>
+                            
+                            <div class="mj-card">
+                                <div class="mj-card-icon">🗺</div>
+                                <h3>Création de scénarios</h3>
+                                <p>Outils et techniques pour créer des aventures mémorables dans votre univers.</p>
+                            </div>
+                            
+                            <div class="mj-card">
+                                <div class="mj-card-icon">⚡</div>
+                                <h3>Gestion du rythme</h3>
+                                <p>Conseils pour maintenir l'intensité et l'engagement durant vos sessions.</p>
+                            </div>
+                        </div>
+
+                        <div class="quote-box">
+                            <div class="quote-text">
+                                "Le rôle du MJ n'est pas d'être l'adversaire des joueurs, mais le gardien de l'histoire que vous créez ensemble."
+                            </div>
+                            <div class="quote-author">— Philosophie G&D</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="datapad-footer">
+            <div class="footer-line"></div>
+            <div class="footer-content">
+                <span class="footer-text">G&D LIGHT SYSTEM v1.0</span>
+                <span class="footer-separator">|</span>
+                <span class="footer-text">DATAPAD INTERFACE</span>
+                <span class="footer-separator">|</span>
+                <span class="footer-text" id="timestamp"></span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
