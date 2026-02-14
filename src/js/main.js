@@ -5,6 +5,8 @@ import { MarkdownParser, loadMarkdownLibrary } from './utils/markdown.js';
 import { Navigation } from './components/Navigation.js';
 import { HomePage } from './components/HomePage.js';
 import { CategoryPage } from './components/CategoryPage.js';
+import { SearchEngine } from './utils/searchEngine.js';
+import { SearchBar } from './components/SearchBar.js';
 
 class App {
     constructor() {
@@ -14,6 +16,8 @@ class App {
         this.navigation = null;
         this.homePage = null;
         this.categoryPage = null;
+        this.searchEngine = null;
+        this.searchBar = null;
         this.appElement = document.getElementById('app');
         this.initThemeToggle();
     }
@@ -55,6 +59,8 @@ class App {
             this.navigation = new Navigation(this.dataStore, this.router);
             this.homePage = new HomePage(this.dataStore);
             this.categoryPage = new CategoryPage(this.dataStore, this.markdownParser);
+            this.searchEngine = new SearchEngine(this.dataStore);
+            this.searchBar = new SearchBar(this.searchEngine, this.router);
             console.log('✓ Composants initialisés');
             
             // Setup routes
@@ -79,6 +85,9 @@ class App {
             };
             
             console.log('✅ Application initialisée avec succès !');
+            
+            // Build search index in background
+            this.searchEngine.buildIndex();
             
         } catch (error) {
             console.error('❌ Erreur lors de l\'initialisation:', error);

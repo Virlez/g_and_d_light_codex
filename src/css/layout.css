@@ -91,10 +91,22 @@
 }
 
 /* Navigation */
+.navbar-row {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
 .main-nav {
     display: flex;
     gap: var(--spacing-md);
     flex-wrap: wrap;
+    align-items: center;
+}
+
+.nav-search {
+    margin-left: auto;
+    position: relative;
 }
 
 .nav-link {
