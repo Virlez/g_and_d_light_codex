@@ -20,6 +20,11 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    
+    <!-- Apply theme before render to prevent flash -->
+    <script>
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'jedi');
+    </script>
 </head>
 <body>
     <!-- Header -->

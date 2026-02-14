@@ -1,15 +1,17 @@
 :root {
-    /* Colors - Star Wars Theme */
+    /* Colors - Jedi Theme (default) */
     --color-space-dark: #0a0e27;
     --color-space-darker: #050811;
     --color-space-light: #1a1f3a;
     --color-space-lighter: #252d4f;
     
-    --color-blue-jedi: #4a9eff;
-    --color-blue-glow: #6bb6ff;
-    --color-orange-sith: #ff6b35;
-    --color-orange-glow: #ff8c5a;
+    --color-accent: #4a9eff;
+    --color-accent-glow: #6bb6ff;
+    --color-accent-rgb: 74, 158, 255;
+    --color-secondary-accent: #ff6b35;
+    --color-secondary-accent-glow: #ff8c5a;
     
+    --color-heading: #ffffff;
     --color-text-primary: #f2f5fa;
     --color-text-secondary: #d0dae8;
     --color-text-muted: #9aabc0;
@@ -17,6 +19,11 @@
     --color-success: #4ade80;
     --color-warning: #fbbf24;
     --color-error: #ef4444;
+    
+    /* Toggle indicator */
+    --toggle-indicator: linear-gradient(135deg, #4a9eff, #6bb6ff);
+    --toggle-indicator-shadow: 0 0 8px rgba(74, 158, 255, 0.4);
+    --toggle-position: 4px;
     
     /* Typography */
     --font-display: 'Audiowide', cursive;
@@ -65,8 +72,8 @@
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
     --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.5);
-    --shadow-glow-blue: 0 0 20px rgba(74, 158, 255, 0.3);
-    --shadow-glow-orange: 0 0 20px rgba(255, 107, 53, 0.3);
+    --shadow-glow-accent: 0 0 20px rgba(var(--color-accent-rgb), 0.3);
+    --shadow-glow-secondary: 0 0 20px rgba(255, 107, 53, 0.3);
     
     /* Transitions */
     --transition-fast: 150ms ease-in-out;
@@ -91,11 +98,13 @@
     --color-space-light: #381818;
     --color-space-lighter: #4d2525;
     
-    --color-blue-jedi: #ff2a2a;
-    --color-blue-glow: #ff4d4d;
-    --color-orange-sith: #ff6b35;
-    --color-orange-glow: #ff8c5a;
+    --color-accent: #ff2a2a;
+    --color-accent-glow: #ff4d4d;
+    --color-accent-rgb: 255, 42, 42;
+    --color-secondary-accent: #ff6b35;
+    --color-secondary-accent-glow: #ff8c5a;
     
+    --color-heading: #ffffff;
     --color-text-primary: #f5e6e6;
     --color-text-secondary: #ddc4c4;
     --color-text-muted: #a88a8a;
@@ -104,10 +113,15 @@
     --color-warning: #fbbf24;
     --color-error: #ff4444;
     
+    /* Toggle indicator */
+    --toggle-indicator: linear-gradient(135deg, #ff2a2a, #cc0000);
+    --toggle-indicator-shadow: 0 0 8px rgba(255, 42, 42, 0.5);
+    --toggle-position: 34px;
+    
     /* Shadows for sith theme - no glow for readability */
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
     --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.5);
     --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.6);
-    --shadow-glow-blue: none;
-    --shadow-glow-orange: none;
+    --shadow-glow-accent: none;
+    --shadow-glow-secondary: none;
 }

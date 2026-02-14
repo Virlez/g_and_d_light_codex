@@ -12,8 +12,8 @@
     top: 0;
     z-index: var(--z-sticky);
     background: linear-gradient(180deg, var(--color-space-darker) 0%, var(--color-space-dark) 100%);
-    border-bottom: 2px solid var(--color-blue-jedi);
-    box-shadow: var(--shadow-glow-blue);
+    border-bottom: 2px solid var(--color-accent);
+    box-shadow: var(--shadow-glow-accent);
     padding: var(--spacing-md) 0;
 }
 
@@ -39,8 +39,8 @@
 .logo-main {
     font-family: var(--font-display);
     font-size: var(--font-size-3xl);
-    color: var(--color-blue-jedi);
-    text-shadow: var(--shadow-glow-blue);
+    color: var(--color-accent);
+    text-shadow: var(--shadow-glow-accent);
     letter-spacing: 2px;
 }
 
@@ -59,7 +59,7 @@
     gap: 5px;
     padding: var(--spacing-sm);
     background: transparent;
-    border: 1px solid var(--color-blue-jedi);
+    border: 1px solid var(--color-accent);
     border-radius: var(--radius-sm);
     transition: all var(--transition-base);
 }
@@ -68,12 +68,12 @@
     display: block;
     width: 24px;
     height: 2px;
-    background-color: var(--color-blue-jedi);
+    background-color: var(--color-accent);
     transition: all var(--transition-base);
 }
 
 .mobile-menu-toggle:hover {
-    background-color: rgba(74, 158, 255, 0.1);
+    background-color: rgba(var(--color-accent-rgb), 0.1);
 }
 
 .mobile-menu-toggle.active span:nth-child(1) {
@@ -109,15 +109,15 @@
 }
 
 .nav-link:hover {
-    color: var(--color-blue-jedi);
-    border-color: var(--color-blue-jedi);
-    box-shadow: var(--shadow-glow-blue);
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-glow-accent);
 }
 
 .nav-link.active {
-    color: var(--color-blue-jedi);
-    background: rgba(74, 158, 255, 0.1);
-    border-color: var(--color-blue-jedi);
+    color: var(--color-accent);
+    background: rgba(var(--color-accent-rgb), 0.1);
+    border-color: var(--color-accent);
 }
 
 /* Main Content */
