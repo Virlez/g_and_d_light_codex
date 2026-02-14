@@ -27,7 +27,7 @@ export class HomePage {
                 <h1 class="home-title">Codex G&D</h1>
                 <h2 class="home-subtitle">Au Coeur de Star Wars</h2>
                 <p class="home-description">
-                    Bienvenue dans le codex de règles du système G&D - Au Coeur de Star Wars.
+                    Bienvenue dans le codex de règles du système Gloire & Déchéance - Au Coeur de Star Wars.
                     Ce système de jeu de rôle vous permet de vivre des aventures épiques
                     dans la galaxie lointaine, très lointaine...
                 </p>
