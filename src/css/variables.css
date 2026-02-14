@@ -1,0 +1,91 @@
+:root {
+    /* Colors - Star Wars Theme */
+    --color-space-dark: #0a0e27;
+    --color-space-darker: #050811;
+    --color-space-light: #1a1f3a;
+    --color-space-lighter: #252d4f;
+    
+    --color-blue-jedi: #4a9eff;
+    --color-blue-glow: #6bb6ff;
+    --color-orange-sith: #ff6b35;
+    --color-orange-glow: #ff8c5a;
+    
+    --color-text-primary: #e8edf5;
+    --color-text-secondary: #b8c5d6;
+    --color-text-muted: #7a8ca0;
+    
+    --color-success: #4ade80;
+    --color-warning: #fbbf24;
+    --color-error: #ef4444;
+    
+    /* Typography */
+    --font-display: 'Audiowide', cursive;
+    --font-body: 'Roboto', sans-serif;
+    
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+    --font-size-5xl: 3rem;
+    
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    
+    --line-height-tight: 1.25;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+    
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --spacing-3xl: 4rem;
+    
+    /* Layout */
+    --container-max-width: 1200px;
+    --header-height: 80px;
+    --sidebar-width: 280px;
+    
+    /* Border Radius */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.5);
+    --shadow-glow-blue: 0 0 20px rgba(74, 158, 255, 0.3);
+    --shadow-glow-orange: 0 0 20px rgba(255, 107, 53, 0.3);
+    
+    /* Transitions */
+    --transition-fast: 150ms ease-in-out;
+    --transition-base: 250ms ease-in-out;
+    --transition-slow: 400ms ease-in-out;
+    
+    /* Z-index */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+}
+
+/* Dark theme adjustments */
+@media (prefers-color-scheme: light) {
+    :root {
+        /* Keep dark theme even if user prefers light */
+    }
+}

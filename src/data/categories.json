@@ -1,0 +1,55 @@
+[
+    {
+        "id": "systeme",
+        "name": "Système",
+        "icon": "⚙️",
+        "description": "Règles de base, mécaniques de jeu et résolution d'actions",
+        "contentPath": "systeme/index",
+        "order": 1
+    },
+    {
+        "id": "personnage",
+        "name": "Le Personnage",
+        "icon": "👤",
+        "description": "Création de personnage, compétences et caractéristiques",
+        "contentPath": "personnage/index",
+        "order": 2,
+        "subPages": [
+            {
+                "id": "creation",
+                "name": "Création du personnage",
+                "icon": "✨",
+                "contentPath": "personnage/creation",
+                "subPages": [
+                    { "id": "scores-base", "name": "Les Scores de base", "contentPath": "personnage/scores-base" },
+                    { "id": "races", "name": "Les Races", "contentPath": "personnage/races" },
+                    { "id": "archetypes", "name": "Les Archétypes", "contentPath": "personnage/archetypes" },
+                    { "id": "scores-ajoutes", "name": "Les Scores ajoutés", "contentPath": "personnage/scores-ajoutes" },
+                    { "id": "talents", "name": "Les Talents", "contentPath": "personnage/talents" },
+                    { "id": "valeurs-derivees", "name": "Les valeurs dérivées", "contentPath": "personnage/valeurs-derivees" },
+                    { "id": "langues", "name": "Les Langues", "contentPath": "personnage/langues" },
+                    { "id": "personnages-evolues", "name": "Les Personnages plus évolués", "contentPath": "personnage/personnages-evolues" }
+                ]
+            },
+            {
+                "id": "arsenal",
+                "name": "L'Arsenal",
+                "icon": "⚔️",
+                "contentPath": "personnage/arsenal",
+                "subPages": [
+                    { "id": "protections", "name": "Les Protections", "contentPath": "personnage/protections" },
+                    { "id": "armement", "name": "L'Armement", "contentPath": "personnage/armement" },
+                    { "id": "objets-soutien", "name": "Les objets de soutien", "contentPath": "personnage/objets-soutien" }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "mj",
+        "name": "Maître de Jeu",
+        "icon": "🎲",
+        "description": "Guide pour les maîtres de jeu et gestion des parties",
+        "contentPath": "mj/index",
+        "order": 3
+    }
+]

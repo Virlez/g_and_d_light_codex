@@ -1,0 +1,21 @@
+# Logs et Debugs
+
+node_modules/
+dist/
+build/
+.cache/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*~
