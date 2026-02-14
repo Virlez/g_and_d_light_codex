@@ -11,15 +11,74 @@
         padding: 0 var(--spacing-md);
     }
 
+    /* Logo on its own line, centered */
+    .logo {
+        display: flex;
+        width: 100%;
+        order: 0;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: var(--spacing-xs);
+    }
+
+    .logo-main {
+        font-size: var(--font-size-2xl);
+    }
+
+    .logo-subtitle {
+        display: none;
+    }
+
+    .header {
+        padding: var(--spacing-sm) 0;
+    }
+
+    /* Container: wrap so logo takes full first row */
+    .header > .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: var(--spacing-sm);
+    }
+
+    /* header-content dissolves so logo and header-actions become direct flex children */
+    .header-content {
+        display: contents;
+    }
+
+    /* header-actions holds toggle + burger, stays on second row */
+    .header-actions {
+        order: 2;
+        flex-shrink: 0;
+    }
+
+    /* navbar-row dissolves so its children participate in container flex */
+    .navbar-row {
+        order: 1;
+        flex: 1;
+        min-width: 0;
+        display: contents;
+    }
+
+    /* Search bar fills remaining space on second row */
+    .nav-search {
+        order: 1;
+        margin-left: 0;
+        flex: 1;
+        min-width: 0;
+    }
+
     .mobile-menu-toggle {
         display: flex;
     }
 
+    /* Nav menu drops below the top row when open */
     .main-nav {
         display: none;
         flex-direction: column;
         width: 100%;
-        margin-top: var(--spacing-md);
+        order: 3;
+        margin-top: var(--spacing-sm);
         padding-top: var(--spacing-md);
         border-top: 1px solid var(--color-space-lighter);
     }
@@ -33,8 +92,25 @@
         text-align: center;
     }
 
-    .logo-main {
-        font-size: var(--font-size-2xl);
+    .search-input {
+        width: 100%;
+        padding-right: 10px;
+    }
+
+    .search-input:focus {
+        width: 100%;
+    }
+
+    .search-shortcut {
+        display: none;
+    }
+
+    .search-results {
+        position: fixed;
+        left: var(--spacing-md);
+        right: var(--spacing-md);
+        top: auto;
+        min-width: unset;
     }
 
     .grid-2,
@@ -90,27 +166,15 @@
     }
 }
 
-/* Mobile */
+/* Small mobile */
 @media (max-width: 480px) {
     :root {
         --spacing-xl: 1.5rem;
         --spacing-2xl: 2rem;
     }
 
-    .header {
-        padding: var(--spacing-sm) 0;
-    }
-
     .main-content {
         padding: var(--spacing-xl) 0;
-    }
-
-    .logo-main {
-        font-size: var(--font-size-xl);
-    }
-
-    .logo-subtitle {
-        font-size: var(--font-size-xs);
     }
 
     .btn {

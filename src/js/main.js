@@ -5,6 +5,8 @@ import { MarkdownParser, loadMarkdownLibrary } from './utils/markdown.js';
 import { Navigation } from './components/Navigation.js';
 import { HomePage } from './components/HomePage.js';
 import { CategoryPage } from './components/CategoryPage.js';
+import { SearchEngine } from './utils/searchEngine.js';
+import { SearchBar } from './components/SearchBar.js';
 
 class App {
     constructor() {
@@ -14,6 +16,8 @@ class App {
         this.navigation = null;
         this.homePage = null;
         this.categoryPage = null;
+        this.searchEngine = null;
+        this.searchBar = null;
         this.appElement = document.getElementById('app');
         this.initThemeToggle();
     }
@@ -55,6 +59,8 @@ class App {
             this.navigation = new Navigation(this.dataStore, this.router);
             this.homePage = new HomePage(this.dataStore);
             this.categoryPage = new CategoryPage(this.dataStore, this.markdownParser);
+            this.searchEngine = new SearchEngine(this.dataStore);
+            this.searchBar = new SearchBar(this.searchEngine, this.router);
             console.log('✓ Composants initialisés');
             
             // Setup routes
@@ -75,10 +81,20 @@ class App {
             // Update active link on route change
             this.router.onRouteChange = () => {
                 this.navigation.updateActiveLink();
-                window.scrollTo(0, 0);
+                const query = this.router.pendingSearchQuery;
+                this.router.pendingSearchQuery = null;
+                if (query) {
+                    // Wait for async content render, then scroll to match
+                    this._scrollToSearchMatch(query);
+                } else {
+                    window.scrollTo(0, 0);
+                }
             };
             
             console.log('✅ Application initialisée avec succès !');
+            
+            // Build search index in background
+            this.searchEngine.buildIndex();
             
         } catch (error) {
             console.error('❌ Erreur lors de l\'initialisation:', error);
@@ -91,6 +107,97 @@ class App {
                 </div>
             `;
         }
+    }
+
+    /**
+     * Scroll to the first occurrence of search terms in the rendered page content.
+     * Retries a few times to wait for async content to finish rendering.
+     */
+    _scrollToSearchMatch(query, attempt = 0) {
+        const maxAttempts = 10;
+        const contentEl = this.appElement.querySelector('.content-section');
+
+        if (!contentEl && attempt < maxAttempts) {
+            setTimeout(() => this._scrollToSearchMatch(query, attempt + 1), 150);
+            return;
+        }
+        if (!contentEl) return;
+
+        // Normalize query: strip accents, split into terms
+        const terms = query
+            .toLowerCase()
+            .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+            .split(/\s+/)
+            .filter(t => t.length >= 2);
+        if (terms.length === 0) return;
+
+        // Walk text nodes to find the first match, skipping nav elements
+        const walker = document.createTreeWalker(contentEl, NodeFilter.SHOW_TEXT, {
+            acceptNode(node) {
+                const parent = node.parentElement;
+                if (parent && parent.closest('.sub-navigation, .breadcrumb, .page-navigation')) {
+                    return NodeFilter.FILTER_REJECT;
+                }
+                return NodeFilter.FILTER_ACCEPT;
+            }
+        });
+        let matchNode = null;
+        let matchIndex = -1;
+        let matchTerm = '';
+
+        while (walker.nextNode()) {
+            const nodeText = walker.currentNode.textContent
+                .toLowerCase()
+                .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            for (const term of terms) {
+                const idx = nodeText.indexOf(term);
+                if (idx !== -1) {
+                    matchNode = walker.currentNode;
+                    matchIndex = idx;
+                    matchTerm = term;
+                    break;
+                }
+            }
+            if (matchNode) break;
+        }
+
+        if (!matchNode) {
+            window.scrollTo(0, 0);
+            return;
+        }
+
+        // Wrap the matched text in a highlight <mark>
+        const text = matchNode.textContent;
+        const realIndex = text.toLowerCase()
+            .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+            .indexOf(matchTerm);
+        const before = text.slice(0, realIndex);
+        const matched = text.slice(realIndex, realIndex + matchTerm.length);
+        const after = text.slice(realIndex + matchTerm.length);
+
+        const mark = document.createElement('mark');
+        mark.className = 'search-highlight';
+        mark.textContent = matched;
+
+        const parent = matchNode.parentNode;
+        const fragment = document.createDocumentFragment();
+        if (before) fragment.appendChild(document.createTextNode(before));
+        fragment.appendChild(mark);
+        if (after) fragment.appendChild(document.createTextNode(after));
+        parent.replaceChild(fragment, matchNode);
+
+        // Scroll to the highlighted element
+        mark.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        // Remove the highlight after a few seconds
+        setTimeout(() => {
+            mark.classList.add('search-highlight-fade');
+            setTimeout(() => {
+                // Replace mark with plain text
+                const textNode = document.createTextNode(mark.textContent);
+                mark.parentNode.replaceChild(textNode, mark);
+            }, 1000);
+        }, 2500);
     }
 
     setupRoutes() {
