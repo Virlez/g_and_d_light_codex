@@ -24,8 +24,7 @@ Le système considère les paliers suivants :
 ### Progression des Talents
 Pour une évolution linéaire, l'acquisition des talents se fait ainsi :
 * 1 talent pris à la **création**.
-* 1 talent tous les **5 points** du niveau de puissance.
-* 1 autre talent récupéré au **niveau 33**.
+* 1 talent tous les **3 points** du niveau de puissance.
 
 ### Création avancée
 Certains joueurs voudront créer un personnage qui a déjà passé les premières épreuves de sa vie.
