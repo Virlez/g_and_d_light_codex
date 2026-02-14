@@ -5,7 +5,20 @@
         "icon": "⚙️",
         "description": "Règles de base, mécaniques de jeu et résolution d'actions",
         "contentPath": "systeme/index",
-        "order": 1
+        "order": 1,
+        "subPages": [
+            { "id": "valeurs-des-des", "name": "Les valeurs des dés", "icon": "🎲", "contentPath": "systeme/valeurs-des-des" },
+            { "id": "entraide", "name": "L’Entraide", "icon": "🤝", "contentPath": "systeme/entraide" },
+            { "id": "exploits-echecs", "name": "Exploits et échecs critiques", "icon": "💥", "contentPath": "systeme/exploits-echecs" },
+            { "id": "caracteristiques", "name": "Les Caractéristiques", "icon": "🧬", "contentPath": "systeme/caracteristiques" },
+            { "id": "combat", "name": "Le Combat", "icon": "⚔️", "contentPath": "systeme/combat",
+                "subPages": [
+                    { "id": "phases-combat", "name": "Phases de combat", "icon": "⏱️", "contentPath": "systeme/combat" },
+                    { "id": "styles-combat", "name": "Styles de combat", "icon": "🥋", "contentPath": "systeme/styles-combat" },
+                    { "id": "degats-blessures", "name": "Dégâts, blessures et soins", "icon": "❤️‍🩹", "contentPath": "systeme/degats-blessures-soins" }
+                ]
+            }
+        ]
     },
     {
         "id": "personnage",

@@ -1,3 +1,3 @@
-# Système de jeu G&D - Au Coeur de Star Wars
+# Système de jeu
 
-## Page en construction
+Bienvenue dans la section système. Utilisez le menu pour accéder aux différentes parties du système de jeu.

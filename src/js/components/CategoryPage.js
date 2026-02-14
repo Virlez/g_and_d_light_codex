@@ -7,7 +7,6 @@ export class CategoryPage {
 
     async render(categoryId, subPageId = null) {
         const category = this.dataStore.getCategoryById(categoryId);
-        
         if (!category) {
             return `
                 <div class="content-section">
@@ -18,10 +17,11 @@ export class CategoryPage {
             `;
         }
 
-        // Determiner le contenu à charger
+        // Déterminer le contenu à charger
         let contentPath = category.contentPath;
         let currentPage = category;
-        
+        let isSystemeSection = false;
+
         if (subPageId && category.subPages) {
             // Chercher dans les sous-pages de premier niveau
             const subPage = category.subPages.find(sp => sp.id === subPageId);
@@ -42,6 +42,8 @@ export class CategoryPage {
                 }
             }
         }
+
+        // Suppression du cas particulier SYSTÈME : chaque sous-page doit charger son propre fichier markdown via contentPath
 
         // Show loading state
         const appElement = document.getElementById('app');
