@@ -1,6 +1,6 @@
 # G&D Codex - Au Coeur de Star Wars
 
-Site web statique pour consulter les règles du système de jeu de rôle G&D - Au Coeur de Star Wars.
+Site web statique pour consulter les règles du système de jeu de rôle G&D - Au Coeur de Star Wars. C'est un système de jeu origellement créé par un utilisateur du nom de Caiain pour le MMORPG Star Wars The Old Republic
 
 ## 🚀 Lancement du site
 
