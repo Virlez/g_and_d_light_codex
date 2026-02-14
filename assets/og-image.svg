@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a"/>
+      <stop offset="50%" style="stop-color:#0d1525"/>
+      <stop offset="100%" style="stop-color:#0a0e1a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4a9eff"/>
+      <stop offset="100%" style="stop-color:#7bb8ff"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Stars -->
+  <circle cx="100" cy="80" r="1.5" fill="#ffffff" opacity="0.6"/>
+  <circle cx="250" cy="150" r="1" fill="#ffffff" opacity="0.4"/>
+  <circle cx="400" cy="60" r="1.5" fill="#ffffff" opacity="0.5"/>
+  <circle cx="550" cy="200" r="1" fill="#ffffff" opacity="0.3"/>
+  <circle cx="700" cy="100" r="1.5" fill="#ffffff" opacity="0.6"/>
+  <circle cx="850" cy="180" r="1" fill="#ffffff" opacity="0.4"/>
+  <circle cx="1000" cy="70" r="1.5" fill="#ffffff" opacity="0.5"/>
+  <circle cx="1100" cy="160" r="1" fill="#ffffff" opacity="0.3"/>
+  <circle cx="150" cy="400" r="1" fill="#ffffff" opacity="0.4"/>
+  <circle cx="350" cy="500" r="1.5" fill="#ffffff" opacity="0.5"/>
+  <circle cx="600" cy="450" r="1" fill="#ffffff" opacity="0.3"/>
+  <circle cx="800" cy="520" r="1.5" fill="#ffffff" opacity="0.6"/>
+  <circle cx="1050" cy="480" r="1" fill="#ffffff" opacity="0.4"/>
+  <!-- Top accent line -->
+  <rect x="0" y="0" width="1200" height="3" fill="url(#accent)" filter="url(#glow)"/>
+  <!-- Bottom accent line -->
+  <rect x="0" y="627" width="1200" height="3" fill="url(#accent)" filter="url(#glow)"/>
+  <!-- Title -->
+  <text x="600" y="260" text-anchor="middle" font-family="'Arial Black', 'Helvetica', sans-serif" font-size="96" font-weight="bold" fill="url(#accent)" filter="url(#glow)" letter-spacing="6">G&amp;D Codex</text>
+  <!-- Subtitle -->
+  <text x="600" y="340" text-anchor="middle" font-family="'Arial', 'Helvetica', sans-serif" font-size="32" fill="#8899aa" letter-spacing="8" text-transform="uppercase">Au Cœur de Star Wars</text>
+  <!-- Tagline -->
+  <text x="600" y="420" text-anchor="middle" font-family="'Arial', 'Helvetica', sans-serif" font-size="22" fill="#556677" letter-spacing="3">Codex des règles du jeu de rôle</text>
+  <!-- Decorative side lines -->
+  <line x1="200" y1="380" x2="460" y2="380" stroke="#4a9eff" stroke-width="1" opacity="0.3"/>
+  <line x1="740" y1="380" x2="1000" y2="380" stroke="#4a9eff" stroke-width="1" opacity="0.3"/>
+</svg>
