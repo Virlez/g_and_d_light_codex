@@ -480,3 +480,54 @@
     min-width: 200px;
     max-width: 45%;
 }
+
+/* Bouton créateur de fiche de personnage */
+.character-sheet-access {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.character-sheet-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg) var(--spacing-xl);
+    background: linear-gradient(135deg, var(--color-blue-jedi) 0%, var(--color-space-dark) 100%);
+    border: 2px solid var(--color-blue-jedi);
+    border-radius: var(--radius-lg);
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+    box-shadow: var(--shadow-glow-blue);
+    transition: background var(--transition-base), box-shadow var(--transition-base);
+}
+
+.character-sheet-btn:hover {
+    background: linear-gradient(135deg, var(--color-orange-sith) 0%, var(--color-space-dark) 100%);
+    border-color: var(--color-orange-sith);
+    box-shadow: var(--shadow-glow-orange);
+}
+
+.character-sheet-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.character-sheet-label {
+    font-size: var(--font-size-base);
+    letter-spacing: 1px;
+}
+
+/* Responsive: bouton sur mobile */
+@media (max-width: 768px) {
+    .character-sheet-btn {
+        width: 100%;
+        justify-content: center;
+        font-size: var(--font-size-base);
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+}
