@@ -42,6 +42,3 @@ Dans le cas de races Hybrides, on choisit le bonus d’un des parents.
 | **Zabrak** | (+1) Constitution | |
 | **Zeltron** | (+1) Social | |
 
----
-
-**Prochaine étape :** Après avoir choisi votre race, sélectionnez votre [Archétype](#).

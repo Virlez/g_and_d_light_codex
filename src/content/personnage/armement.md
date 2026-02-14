@@ -50,7 +50,3 @@ Contrairement aux autres, ces armes ont une **valeur de dégâts fixe** (pas de 
 | **Mine** | 14 | x2 dégâts sur infanterie ou hordes. x4 si horde **Et** infanterie.|
 | **Charge explosive** | 20 | x2 dégâts sur hordes. Dégâts normaux sur véhicules/bâtiments. |
 | **Lance-roquette** | 25 | x2 dégâts sur infanterie ou hordes. x4 si horde **Et** infanterie.. Dégâts normaux sur véhicules/bâtiments. |
-
----
-
-**Retour à :** [L'Arsenal](#) | **Suivant :** [Objets de soutien](#)

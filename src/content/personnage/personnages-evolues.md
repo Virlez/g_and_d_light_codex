@@ -29,4 +29,3 @@ Pour une évolution linéaire, l'acquisition des talents se fait ainsi :
 ### Création avancée
 Certains joueurs voudront créer un personnage qui a déjà passé les premières épreuves de sa vie.
 * **Limite à la création :** Un personnage ne devrait pas dépasser un total de **32 points** (soit un niveau de puissance de **15**).
-**Prochaine section :** Consultez maintenant [L'Arsenal](#) pour équiper votre personnage avec armes, armures et équipement.

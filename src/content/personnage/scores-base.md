@@ -18,6 +18,3 @@ Si un personnage est partiellement cybernétique suite à des implants ou des me
 * **Restriction :** Il ne pourra pas dépasser le rang **Expert (6)** dans celle-ci.
 * **Bonus :** À contrario, il gagne une valeur bonus de **(+1)** dans la caractéristique qu’il souhaite.
 
----
-
-**Prochaine étape :** Une fois vos scores de base définis, passez au choix de votre [Race](#).

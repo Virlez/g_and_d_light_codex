@@ -35,4 +35,3 @@ L’attaque est considérée comme un test qui doit être **égal ou supérieur*
 > * Sa **Réaction** est donc de **4** (7 / 2 = 3,5 arrondi à 4).
 > * Pour le toucher, il faut avoir au moins 4 réussites.
 
-**Prochaine étape :** Déterminez les [Langues](#) que parle votre personnage.

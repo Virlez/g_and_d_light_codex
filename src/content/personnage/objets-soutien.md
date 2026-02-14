@@ -22,7 +22,3 @@ Un Répapack rend un nombre de Points d’Armure (PA) selon la formule suivante 
 
 ### Les objets narratifs
 Ils sont à déterminer avec un **MJ Global**. Ils sont présents uniquement pour une raison de narration et n’ont normalement **aucun bonus** qui leur est attaché.
-
----
-
-**Retour à :** [L'Arsenal](#) | **Retour à :** [Le Personnage](#)

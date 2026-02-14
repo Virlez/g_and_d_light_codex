@@ -18,4 +18,3 @@ Un personnage Sensible est un être qui est incapable d’user la Force comme le
 
 * **Bonus :** Il obtient la valeur bonus de **(+1)**
 
-**Prochaine étape :** Une fois votre archétype choisi, passez aux [Scores ajoutés](#) pour personnaliser votre personnage.

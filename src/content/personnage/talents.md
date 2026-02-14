@@ -97,6 +97,3 @@ Uniquement pour ceux ayant transcendé leur condition grâce à la Force.
 * **Apprenti de la Force** *(Req. 5 natif en Force)* : (+1) en valeur bonus en Force.
     * └─ **Expert de la Force** *(Req. Apprenti de la Force)* : (+1) en valeur bonus en Force.
 
----
-
-**Prochaine étape :** Avec vos talents choisis, calculez vos [Valeurs dérivées](#).

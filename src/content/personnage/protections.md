@@ -62,6 +62,3 @@ La création est très difficile et demande un rang spécifique dans la caracté
 
 > **Exemple :** Larmisch possède un bouclier psychique lourd (15 PB). Après un combat contre un Terentatek, il lui reste 10 PB. Il récupère donc 5 PB automatiquement, remontant à 15 PB. Si jamais il tombe à 0 PB, il devra réussir un test de Force de difficulté 4 (5 réussites) pour le réactiver.
 
----
-
-**Retour à :** [L'Arsenal](#) | **Suivant :** [L'Armement](#)

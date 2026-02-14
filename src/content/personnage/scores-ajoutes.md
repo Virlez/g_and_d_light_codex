@@ -17,6 +17,4 @@ Le joueur peut placer comme il le souhaite **8 points** dans les caractéristiqu
 
 À ce stade, un personnage a un total de **17 points** dans ses caractéristiques. Cela représente le **niveau de puissance 0**. Un personnage avec plus de points a donc commencé sa progression.
 
----
 
-**Prochaine étape :** Maintenant que vos compétences sont définies, choisissez vos [Talents](#) spéciaux.

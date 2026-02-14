@@ -41,6 +41,3 @@ Explorez chaque section dans l'ordre pour créer votre personnage, ou consultez 
 - **[Les Langues](#)** - Communication
 - **[Les Personnages plus évolués](#)** - Niveau avancé
 
----
-
-*Une fois votre personnage créé, consultez la section [L'Arsenal](#) pour choisir votre équipement.*
