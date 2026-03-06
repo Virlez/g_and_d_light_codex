@@ -689,6 +689,13 @@
     transition: all var(--transition-base);
     position: relative;
     overflow: hidden;
+
+    /* Prevent default mobile/desktop tap/click highlight that causes a white flash */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-appearance: none;
+    touch-action: manipulation;
 }
 
 .character-sheet-btn::after {
@@ -704,6 +711,21 @@
     border-color: var(--color-heading);
     box-shadow: 0 0 20px var(--color-accent), inset 0 0 20px rgba(var(--color-accent-rgb), 0.5);
     transform: scale(1.02);
+}
+
+/* Active / focus states: avoid abrupt color inversion or white flash while keeping accessibility */
+.character-sheet-btn:active,
+.character-sheet-btn:focus {
+    outline: none;
+    /* keep the same visual but slightly darker to indicate press */
+    background: linear-gradient(180deg, rgba(var(--color-accent-rgb), 0.10) 0%, var(--color-space-darker) 100%);
+    transform: translateY(0);
+    box-shadow: var(--shadow-glow-accent);
+}
+
+/* Ensure external links (target=_blank) don't show platform tap highlights */
+a[target="_blank"], a[target="_blank"]:active, a[target="_blank"]:focus {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 .character-sheet-icon {
