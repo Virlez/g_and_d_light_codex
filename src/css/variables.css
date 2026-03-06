@@ -14,6 +14,8 @@
     --color-accent-rgb: 0, 212, 255;
     --color-secondary-accent: #ffcc00;
     --color-secondary-accent-glow: #ffe680;
+    /* Prerequisite highlight (kept yellow across themes) */
+    --color-prereq: #ffcc00;
     
     /* High contrast text */
     --color-heading: #ffffff;
@@ -115,6 +117,8 @@
     --color-accent-rgb: 255, 0, 0;
     --color-secondary-accent: #d47e1b;
     --color-secondary-accent-glow: #e2902f;
+    /* Force prereq yellow for readability */
+    --color-prereq: #ffcc00;
     
     /* Typographie : Haute lisibilité (éviter le contraste 100% blanc sur fond sombre) */
     --color-heading: #ffffff;       /* Blanc pur (Titres) */

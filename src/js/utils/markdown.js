@@ -14,6 +14,16 @@ export class MarkdownParser {
         // Italic
         html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
 
+        // Prerequisite highlighting: replace occurrences like (Req. ...) with a span.prereq
+        // Handle both raw text and italic-wrapped forms coming from the markdown
+        html = html.replace(/<em>\(Req\.[\s\S]*?\)<\/em>/g, function(m) {
+            var inner = m.replace(/<em>|<\/em>/g, '');
+            return '<span class="prereq">' + inner + '</span>';
+        });
+        html = html.replace(/\(Req\.[^\)]+\)/g, function(m) {
+            return '<span class="prereq">' + m + '</span>';
+        });
+
         // Code
         html = html.replace(/`(.+?)`/g, '<code>$1</code>');
 

@@ -320,9 +320,9 @@
     font-weight: 600;
     font-family: var(--font-body);
     color: var(--color-text-primary);
-    background: rgba(255,255,255,0.02);
-    padding: 0.06em 0.28em;
-    border-radius: 4px;
+    /* no background to avoid visual noise */
+    padding: 0;
+    border-radius: 0;
 }
 
 .content-section code {
@@ -1016,4 +1016,13 @@ a[target="_blank"], a[target="_blank"]:active, a[target="_blank"]:focus {
 .search-highlight-fade {
     background: transparent;
     box-shadow: none;
+}
+
+/* Prerequisite highlight used in talents: strong yellow for visibility */
+.content-section .prereq {
+    color: var(--color-prereq);
+    font-weight: 700;
+    /* keep text emphasis but remove background/pill */
+    padding: 0;
+    border-radius: 0;
 }
