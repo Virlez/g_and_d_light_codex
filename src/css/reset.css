@@ -13,12 +13,17 @@ html {
 
 body {
     min-height: 100vh;
-    line-height: var(--line-height-normal);
+    line-height: var(--dys-line-height);
     font-family: var(--font-body);
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-regular);
     color: var(--color-text-primary);
     background-color: var(--color-space-dark);
+    letter-spacing: var(--dys-letter-spacing);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
     
     /* Galaxy/Starfield Background */
     background-image: 

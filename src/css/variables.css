@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&family=Orbitron:wght@400;700&display=swap');
+
 :root {
     /* Colors - Jedi Theme (default) */
     /* Deep space high-contrast backgrounds */
@@ -29,8 +31,10 @@
     --toggle-position: 4px;
     
     /* Typography */
-    --font-display: 'Audiowide', cursive;
-    --font-body: 'Roboto', sans-serif;
+    --font-display: 'Orbitron', 'Audiowide', sans-serif; /* Sci‑fi headings */
+    --font-body: 'Lexend', 'Roboto', sans-serif;         /* Dyslexic‑friendly body */
+    --dys-letter-spacing: 0.02em; /* slightly increased letter spacing for readability */
+    --dys-line-height: 1.6;      /* more generous line-height for reading comfort */
     
     --font-size-xs: 0.75rem;
     --font-size-sm: 0.875rem;
