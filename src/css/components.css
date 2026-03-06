@@ -723,6 +723,38 @@
     transform: scale(1.02);
 }
 
+/* Selected / active button states: ensure text is white on accent/dark backgrounds for both themes */
+.btn:active,
+.btn.active,
+.btn-primary:active,
+.btn-primary.active,
+.character-sheet-btn:active,
+.character-sheet-btn.active {
+    color: var(--color-heading) !important;
+}
+
+/* Jedi theme: keep selected button text dark for better contrast on light accent */
+[data-theme="jedi"] .btn:active,
+[data-theme="jedi"] .btn.active,
+[data-theme="jedi"] .btn-primary:active,
+[data-theme="jedi"] .btn-primary.active,
+[data-theme="jedi"] .character-sheet-btn:active,
+[data-theme="jedi"] .character-sheet-btn.active {
+    color: var(--color-space-darker) !important;
+}
+
+/* Sith theme: slightly mute the accent when a button is selected for less glare */
+[data-theme="sith"] .btn:active,
+[data-theme="sith"] .btn.active,
+[data-theme="sith"] .btn-primary:active,
+[data-theme="sith"] .btn-primary.active,
+[data-theme="sith"] .character-sheet-btn:active,
+[data-theme="sith"] .character-sheet-btn.active {
+    background: var(--color-accent-dim) !important;
+    border-color: var(--color-accent-dim) !important;
+    box-shadow: 0 0 12px rgba(183, 28, 28, 0.55) !important;
+}
+
 /* Active / focus states: avoid abrupt color inversion or white flash while keeping accessibility */
 .character-sheet-btn:active,
 .character-sheet-btn:focus {

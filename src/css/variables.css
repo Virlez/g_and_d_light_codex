@@ -142,6 +142,9 @@
     --shadow-glow-accent: 0 0 8px rgba(255, 0, 0, 0.4), 0 0 16px rgba(255, 0, 0, 0.2);
     --shadow-glow-secondary: 0 0 8px rgba(212, 126, 27, 0.2);
     
+    /* Muted accent used for selected/active state in Sith theme */
+    --color-accent-dim: #b71c1c;
+
     /* Ligne "sabre laser" élégante : cœur blanc adouci, halo limité */
     --saber-glow: 0 0 2px rgba(255, 255, 255, 0.6), 0 0 6px #ff0000, 0 0 12px rgba(255, 0, 0, 0.5);
 }
