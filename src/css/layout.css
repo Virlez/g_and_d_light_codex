@@ -57,6 +57,7 @@
     color: var(--color-accent);
     text-shadow: var(--shadow-glow-accent);
     letter-spacing: 2px;
+    font-weight: var(--font-weight-bold);
 }
 
 .logo-subtitle {
