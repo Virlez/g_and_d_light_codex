@@ -1,28 +1,31 @@
 :root {
     /* Colors - Jedi Theme (default) */
-    --color-space-dark: #0a0e27;
-    --color-space-darker: #050811;
-    --color-space-light: #1a1f3a;
-    --color-space-lighter: #252d4f;
+    /* Deep space high-contrast backgrounds */
+    --color-space-dark: #060913;
+    --color-space-darker: #020308;
+    --color-space-light: #0d1326;
+    --color-space-lighter: #162040;
     
-    --color-accent: #4a9eff;
-    --color-accent-glow: #6bb6ff;
-    --color-accent-rgb: 74, 158, 255;
-    --color-secondary-accent: #ff6b35;
-    --color-secondary-accent-glow: #ff8c5a;
+    /* Vibrant Lightsaber Cyan & Republic Gold */
+    --color-accent: #00d4ff;
+    --color-accent-glow: #80eaff;
+    --color-accent-rgb: 0, 212, 255;
+    --color-secondary-accent: #ffcc00;
+    --color-secondary-accent-glow: #ffe680;
     
+    /* High contrast text */
     --color-heading: #ffffff;
-    --color-text-primary: #f2f5fa;
-    --color-text-secondary: #d0dae8;
-    --color-text-muted: #9aabc0;
+    --color-text-primary: #f2f7fc;
+    --color-text-secondary: #d9e3f0;
+    --color-text-muted: #9baac6;
     
-    --color-success: #4ade80;
-    --color-warning: #fbbf24;
-    --color-error: #ef4444;
+    --color-success: #00ff88;
+    --color-warning: #ffcc00;
+    --color-error: #ff3333;
     
     /* Toggle indicator */
-    --toggle-indicator: linear-gradient(135deg, #4a9eff, #6bb6ff);
-    --toggle-indicator-shadow: 0 0 8px rgba(74, 158, 255, 0.4);
+    --toggle-indicator: #00d4ff;
+    --toggle-indicator-shadow: 0 0 12px rgba(0, 212, 255, 0.8), 0 0 24px rgba(0, 212, 255, 0.5);
     --toggle-position: 4px;
     
     /* Typography */
@@ -62,18 +65,21 @@
     --header-height: 80px;
     --sidebar-width: 280px;
     
-    /* Border Radius */
-    --radius-sm: 0.25rem;
-    --radius-md: 0.5rem;
-    --radius-lg: 1rem;
-    --radius-xl: 1.5rem;
+    /* Border Radius - more angular for datapad look */
+    --radius-sm: 0;
+    --radius-md: 2px;
+    --radius-lg: 4px;
+    --radius-xl: 8px;
     
-    /* Shadows */
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.5);
-    --shadow-glow-accent: 0 0 20px rgba(var(--color-accent-rgb), 0.3);
-    --shadow-glow-secondary: 0 0 20px rgba(255, 107, 53, 0.3);
+    /* Shadows - Tempered Neon Glows */
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.8);
+    --shadow-md: 0 8px 12px rgba(0, 0, 0, 0.9);
+    --shadow-lg: 0 16px 24px rgba(0, 0, 0, 0.95);
+    --shadow-glow-accent: 0 0 5px rgba(0, 212, 255, 0.3), 0 0 10px rgba(0, 212, 255, 0.1);
+    --shadow-glow-secondary: 0 0 5px rgba(255, 204, 0, 0.3), 0 0 10px rgba(255, 204, 0, 0.1);
+    
+    /* Lightsaber decorative lines - Softer core */
+    --saber-glow: 0 0 2px rgba(255, 255, 255, 0.4), 0 0 5px var(--color-accent), 0 0 10px rgba(0, 212, 255, 0.3);
     
     /* Transitions */
     --transition-fast: 150ms ease-in-out;
@@ -92,36 +98,42 @@
 
 /* Sith theme */
 [data-theme="sith"] {
-    /* Colors - Sith Theme (dark red) */
-    --color-space-dark: #1e0c0c;
-    --color-space-darker: #110707;
-    --color-space-light: #381818;
-    --color-space-lighter: #4d2525;
+    /* UI Design: Deep Burgundy Dark Mode */
+    /* Fonds tendant vers un bordeaux extrêmement profond (esthétique Empire/Kylo Ren) */
+    --color-space-dark: #120909;    /* Fond principal (Noir teinté de rouge sang) */
+    --color-space-darker: #080303;  /* Header / Footer (Fond abyssal) */
+    --color-space-light: #1c0e0e;   /* Cartes (Légèrement plus clair pour détacher la surface) */
+    --color-space-lighter: #281414; /* Bordures */
     
-    --color-accent: #ff2a2a;
-    --color-accent-glow: #ff4d4d;
-    --color-accent-rgb: 255, 42, 42;
-    --color-secondary-accent: #ff6b35;
-    --color-secondary-accent-glow: #ff8c5a;
+    /* Sith Crimson : Un rouge vif et agressif, très punchy */
+    --color-accent: #ff0000;
+    --color-accent-glow: #ff3333;
+    --color-accent-rgb: 255, 0, 0;
+    --color-secondary-accent: #d47e1b;
+    --color-secondary-accent-glow: #e2902f;
     
-    --color-heading: #ffffff;
-    --color-text-primary: #f5e6e6;
-    --color-text-secondary: #ddc4c4;
-    --color-text-muted: #a88a8a;
+    /* Typographie : Haute lisibilité (éviter le contraste 100% blanc sur fond sombre) */
+    --color-heading: #ffffff;       /* Blanc pur (Titres) */
+    --color-text-primary: #f5f5f5;  /* Blanc cassé (Texte actif) */
+    --color-text-secondary: #e6e0e0;/* Gris perle clair (Texte de lecture) */
+    --color-text-muted: #c4b5b5;    /* Gris moyen (Détails) */
     
-    --color-success: #4ade80;
+    --color-success: #34d399;
     --color-warning: #fbbf24;
-    --color-error: #ff4444;
+    --color-error: #ef4444;
     
     /* Toggle indicator */
-    --toggle-indicator: linear-gradient(135deg, #ff2a2a, #cc0000);
-    --toggle-indicator-shadow: 0 0 8px rgba(255, 42, 42, 0.5);
+    --toggle-indicator: #ff0000;
+    --toggle-indicator-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
     --toggle-position: 34px;
     
-    /* Shadows for sith theme - no glow for readability */
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
-    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.5);
-    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.6);
-    --shadow-glow-accent: none;
-    --shadow-glow-secondary: none;
+    /* Ombres professionnelles : Profondeur réelle avec un très léger halo rouge seulement où nécessaire */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.6);
+    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.7);
+    --shadow-glow-accent: 0 0 8px rgba(255, 0, 0, 0.4), 0 0 16px rgba(255, 0, 0, 0.2);
+    --shadow-glow-secondary: 0 0 8px rgba(212, 126, 27, 0.2);
+    
+    /* Ligne "sabre laser" élégante : cœur blanc adouci, halo limité */
+    --saber-glow: 0 0 2px rgba(255, 255, 255, 0.6), 0 0 6px #ff0000, 0 0 12px rgba(255, 0, 0, 0.5);
 }

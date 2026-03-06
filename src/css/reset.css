@@ -19,6 +19,20 @@ body {
     font-weight: var(--font-weight-regular);
     color: var(--color-text-primary);
     background-color: var(--color-space-dark);
+    
+    /* Galaxy/Starfield Background */
+    background-image: 
+        radial-gradient(1px 1px at 15px 25px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 80px 140px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 120px 70px, rgba(255,255,255,0.9), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 210px 110px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 280px 40px, rgba(255,255,255,0.7), rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 30px 220px, rgba(255,255,255,0.6), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 150px 240px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 230px 280px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 70px 310px, rgba(255,255,255,0.7), rgba(0,0,0,0));
+    background-size: 350px 350px;
+    background-attachment: fixed;
 }
 
 img, picture, video, canvas, svg {
