@@ -64,6 +64,12 @@ export class CategoryPage {
                 htmlContent = this.markdownParser.parse(markdownContent);
             }
 
+            // Ensure prerequisites like (Req. ...) are wrapped in a span.prereq
+            // This guarantees highlighting even when using external markdown library
+            htmlContent = htmlContent.replace(/\(Req\.?[^)]+\)/g, function(m) {
+                return '<span class="prereq">' + m + '</span>';
+            });
+
             return this.renderBreadcrumb(category, currentPage, subPageId) + `
                 <div class="content-section">
                     ${this.renderSubNav(category, subPageId)}
